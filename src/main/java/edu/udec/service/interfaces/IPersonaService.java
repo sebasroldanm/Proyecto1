@@ -6,7 +6,7 @@ import edu.udec.entity.Persona;
 
 public interface IPersonaService {
 	
-	public List<Persona> obtener();
+	public List<Persona> listarPersonas();
 	
 	public Persona listarPersonaPorCedula(long cedula);
 	

@@ -1,5 +1,7 @@
 package edu.udec.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,12 @@ public class PersonaController {
 		@Autowired
 		IPersonaService iPersonaService;
 		
+		@GetMapping("/listar")
+		public ResponseEntity<List<Persona>> listarPersonas() {
+			List<Persona> listaPersona = iPersonaService.listarPersonas();
+			return new ResponseEntity<List<Persona>>(listaPersona, HttpStatus.OK);
+		}
+		
 		@GetMapping("/listarPorCedula/{cedula}")
 		public ResponseEntity<Persona> listarPorCedula(@PathVariable long cedula){
 			Persona persona = iPersonaService.listarPersonaPorCedula(cedula);
@@ -26,6 +34,9 @@ public class PersonaController {
 		
 		@GetMapping("/listarPorNombre/{nombre}")
 		public ResponseEntity<Persona> listarPorNombre(@PathVariable String nombre){
-			Persona persona = iPersonaService.
+			Persona persona = iPersonaService.listarPersonaPoNombre(nombre);
+			return new ResponseEntity<Persona>(persona, HttpStatus.OK);
 		}
+		
+		
 }
