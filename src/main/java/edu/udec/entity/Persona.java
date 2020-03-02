@@ -8,6 +8,11 @@ import javax.validation.constraints.Size;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * Clase que contiene atributos de persona
+ * @author Sebastian
+ *
+ */
 @ApiModel( description  = "Clase contenedora de los atributos comunes de una persona.")
 public class Persona {
 
