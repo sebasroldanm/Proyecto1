@@ -1,7 +1,8 @@
 package edu.udec.entity;
 
 //import javax.validation.constraints.Max;
-//import javax.validation.constraints.Min;
+import javax.validation.constraints.Min;
+//import javax.validation.constraints.Size;
 import javax.validation.constraints.Size;
 
 import io.swagger.annotations.ApiModel;
@@ -31,7 +32,7 @@ public class Persona {
 	
 	
 	public Persona() {
-		super();
+
 	}
 
 	public Persona(String nombre, long cedula, String email, int edad, String direccion, String estadoCivil) {
