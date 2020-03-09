@@ -43,7 +43,7 @@ public class PersonaServiceImp implements IPersonaService{
 	public Persona listarPersonaPoNombre(String nombre) {
 		Persona persona = new Persona();
 		for (int i = 0; i < personas.size(); i++) {
-			if (personas.get(i).getNombre().equals(nombre)) {
+			if (personas.get(i).getNombre().toLowerCase().equals(nombre.toLowerCase())) {
 				persona = personas.get(i);
 				break;
 			}
